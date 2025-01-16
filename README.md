@@ -4,8 +4,15 @@ This repository contains the latest development of the KMIDS Unreal Engine 5 (UE
 
 ---
 
+## Contribution Guidelines
+
+For detailed instructions on how to contribute to this project, please refer to [CONTRIBUTION.md](./CONTRIBUTION.md).
+
+---
+
 ## Table of Contents
 - [KMIDS-UE5-V1-2025](#kmids-ue5-v1-2025)
+  - [Contribution Guidelines](#contribution-guidelines)
   - [Table of Contents](#table-of-contents)
 - [Tutorial for Downloading All C++ Requirements for Unreal Engine 5 (Windows/Mac/Linux)](#tutorial-for-downloading-all-c-requirements-for-unreal-engine-5-windowsmaclinux)
   - [Windows Setup](#windows-setup)
