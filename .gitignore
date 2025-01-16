@@ -12,3 +12,6 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+Makefile
+.ignore
+KMIDS_UE5_V1_2025.code-workspace
