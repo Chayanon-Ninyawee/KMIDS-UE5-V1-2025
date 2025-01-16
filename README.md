@@ -13,19 +13,32 @@ This repository contains the latest development of the KMIDS Unreal Engine 5 (UE
     - [2. Install Unreal Engine 5](#2-install-unreal-engine-5)
     - [3. Install Visual Studio](#3-install-visual-studio)
     - [4. Set Up Git](#4-set-up-git)
+    - [5. Install Git LFS (Large File Storage)](#5-install-git-lfs-large-file-storage)
   - [Mac Setup](#mac-setup)
     - [1. Install Epic Games Launcher](#1-install-epic-games-launcher-1)
     - [2. Install Unreal Engine 5](#2-install-unreal-engine-5-1)
     - [3. Install Xcode](#3-install-xcode)
-    - [4. Install Homebrew (Optional but Recommended)](#4-install-homebrew-optional-but-recommended)
+    - [4. Set Up Git](#4-set-up-git-1)
+    - [5. Install Git LFS (Large File Storage)](#5-install-git-lfs-large-file-storage-1)
   - [Linux Setup (Ubuntu Example)](#linux-setup-ubuntu-example)
     - [1. Install Unreal Engine 5](#1-install-unreal-engine-5)
     - [2. Install Build Tools](#2-install-build-tools)
+    - [3. Set Up Git](#3-set-up-git)
+    - [4. Install Git LFS (Large File Storage)](#4-install-git-lfs-large-file-storage)
   - [Final Setup](#final-setup)
   - [Additional Notes](#additional-notes)
 - [Cloning the Repository](#cloning-the-repository)
     - [For Contributors](#for-contributors)
     - [For Non-Contributors](#for-non-contributors)
+- [Setup Unreal Engine 5 Revision Control](#setup-unreal-engine-5-revision-control)
+- [Setting Up Visual Studio Code for Unreal Engine 5](#setting-up-visual-studio-code-for-unreal-engine-5)
+  - [1. Install Visual Studio Code](#1-install-visual-studio-code)
+  - [2. Install Required Extensions](#2-install-required-extensions)
+  - [3. Generate VS Code Project Files](#3-generate-vs-code-project-files)
+  - [4. Configure the Project in VS Code](#4-configure-the-project-in-vs-code)
+  - [5. Set Up Debugging](#5-set-up-debugging)
+  - [6. Enable IntelliSense](#6-enable-intellisense)
+  - [7. Additional Tips](#7-additional-tips)
 - [Known Issues](#known-issues)
     - [Microsoft Azure DevOps Git LFS](#microsoft-azure-devops-git-lfs)
 
@@ -70,6 +83,13 @@ Helpful Youtube tutorial: https://youtu.be/HQDskHVw1to
    git config --global user.email "your.email@example.com"
    ```
 
+### 5. Install Git LFS (Large File Storage)
+1. Download and install Git LFS for Windows from [Git LFS Windows Installer](https://git-lfs.github.com/).
+2. After installation, open **CMD** and run the following command to initialize Git LFS
+   ```bash
+   git lfs install
+   ```
+
 ---
 
 ## Mac Setup
@@ -93,15 +113,32 @@ Unreal Engine requires Xcode for compiling C++ code on macOS.
    ```bash
    xcode-select --install
    ```
+   
+### 4. Set Up Git
+1. Download and install [Git](https://git-scm.com/download/mac) for macOS.
+2. Open the terminal and run the following commands to configure Git:
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
 
-### 4. Install Homebrew (Optional but Recommended)
-Homebrew is a package manager that simplifies the installation of various development tools.
-
-1. Open the terminal and install Homebrew by running:
+### 5. Install Git LFS (Large File Storage)
+1. Install Git LFS using Homebrew. If you don’t have Homebrew installed, follow the installation instructions on [Homebrew's website](https://brew.sh/).
+   
+   To install Homebrew, run the following command in the terminal:
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
-2. After installation, you can use Homebrew to install packages like `git` and other dependencies.
+
+2. Once Homebrew is installed, run the following command to install Git LFS:
+   ```bash
+   brew install git-lfs
+   ```
+
+3. After installation, initialize Git LFS by running:
+   ```bash
+   git lfs install
+   ```
 
 ---
 
@@ -137,6 +174,31 @@ Homebrew is a package manager that simplifies the installation of various develo
    sudo apt install libxrandr2
    sudo apt install libx11-dev
    sudo apt install libfreetype6-dev
+   ```
+
+### 3. Set Up Git
+1. Download and install Git for Linux. On most distributions, you can install Git using your package manager.
+
+   For Ubuntu/Debian-based systems:
+   ```bash
+   sudo apt-get install git
+   ```
+
+2. After installation, configure Git with the following commands:
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
+
+### 4. Install Git LFS (Large File Storage)
+1. Open a terminal and install Git LFS using the package manager:
+   ```bash
+   sudo apt-get install git-lfs
+   ```
+
+2. After installation, initialize Git LFS by running:
+   ```bash
+   git lfs install
    ```
 
 ---
@@ -199,6 +261,92 @@ If you are contributing to this project:
 If you only want to clone the repository:
 - **Wait for the release.**
 - The release will be available on this page, and it will not require signing in to Azure DevOps or dealing with Git LFS.
+
+---
+
+# Setup Unreal Engine 5 Revision Control
+1. Click **Revision Control** on the bottom right.
+2. Select **Git**.
+
+You may need to do this every time you open the project.
+
+---
+
+# Setting Up Visual Studio Code for Unreal Engine 5
+
+Follow these steps to set up Visual Studio Code (VS Code) for Unreal Engine 5 based on the guide from Epic Games:
+
+## 1. Install Visual Studio Code
+Download and install [Visual Studio Code](https://code.visualstudio.com/).
+
+## 2. Install Required Extensions
+Open VS Code and install the following extensions:
+- **C++**: Provides language support for C++.
+- **CMake Tools**: Useful for working with CMake projects.
+- **CodeLLDB**: Adds debugging capabilities.
+
+To install extensions:
+1. Click on the Extensions view (Ctrl+Shift+X).
+2. Search for the extension names.
+3. Click Install.
+
+## 3. Generate VS Code Project Files
+1. Open Unreal Editor and click **Tools** > **Generate Visual Studio Code Project**.
+
+## 4. Configure the Project in VS Code
+1. Open the project in VS Code by clicking **File > Open Folder** and selecting your Unreal project folder.
+2. Wait for VS Code to index the project files.
+
+## 5. Set Up Debugging
+1. Open the **Run and Debug** view in VS Code (Ctrl+Shift+D).
+2. Click on **create a launch.json file**.
+3. Configure the launch.json file for Unreal Engine by specifying the executable path to your game's binary. For example:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Unreal Engine",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Binaries/<PATH_TO_YOUR_GAME>",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true
+        }
+    ]
+}
+```
+
+1. Replace `<PATH_TO_YOUR_GAME>` with the path to your game's executable.
+
+## 6. Enable IntelliSense
+Ensure your C++ configuration in VS Code is correct:
+1. Open the **Command Palette** (Ctrl+Shift+P).
+2. Search for and run **C/C++: Edit Configurations (UI)**.
+3. Verify that the `compilerPath` points to your compiler (e.g., MSVC or Clang).
+4. Add the include paths for Unreal Engine. These can be found in the `Engine/Source` and your project’s `Source` folders.
+
+## 7. Additional Tips
+- For better performance, exclude unnecessary folders from IntelliSense indexing. Add them to the `.vscode/settings.json` file:
+
+```json
+{
+    "files.exclude": {
+        "**/Intermediate/**": true,
+        "**/Saved/**": true,
+        "**/Binaries/**": true
+    },
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+}
+```
+
+- Regularly update your extensions for the latest features and fixes.
+
+You are now ready to use VS Code with Unreal Engine 5!
 
 ---
 
