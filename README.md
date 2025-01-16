@@ -6,7 +6,7 @@ This repository contains the latest development of the KMIDS Unreal Engine 5 (UE
 
 ## Contribution Guidelines
 
-For detailed instructions on how to contribute to this project, please refer to [CONTRIBUTION.md](./CONTRIBUTION.md).
+For detailed instructions on how to contribute to this project, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
