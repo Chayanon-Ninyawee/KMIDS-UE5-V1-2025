@@ -36,9 +36,8 @@ This repository contains the latest development of the KMIDS Unreal Engine 5 (UE
   - [2. Install Required Extensions](#2-install-required-extensions)
   - [3. Generate VS Code Project Files](#3-generate-vs-code-project-files)
   - [4. Configure the Project in VS Code](#4-configure-the-project-in-vs-code)
-  - [5. Set Up Debugging](#5-set-up-debugging)
-  - [6. Enable IntelliSense](#6-enable-intellisense)
-  - [7. Additional Tips](#7-additional-tips)
+  - [5. Enable IntelliSense](#5-enable-intellisense)
+  - [6. Additional Tips](#6-additional-tips)
 - [Known Issues](#known-issues)
     - [Microsoft Azure DevOps Git LFS](#microsoft-azure-devops-git-lfs)
 
@@ -297,40 +296,14 @@ To install extensions:
 1. Open the project in VS Code by clicking **File > Open Folder** and selecting your Unreal project folder.
 2. Wait for VS Code to index the project files.
 
-## 5. Set Up Debugging
-1. Open the **Run and Debug** view in VS Code (Ctrl+Shift+D).
-2. Click on **create a launch.json file**.
-3. Configure the launch.json file for Unreal Engine by specifying the executable path to your game's binary. For example:
-
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch Unreal Engine",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/Binaries/<PATH_TO_YOUR_GAME>",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true
-        }
-    ]
-}
-```
-
-1. Replace `<PATH_TO_YOUR_GAME>` with the path to your game's executable.
-
-## 6. Enable IntelliSense
+## 5. Enable IntelliSense
 Ensure your C++ configuration in VS Code is correct:
 1. Open the **Command Palette** (Ctrl+Shift+P).
 2. Search for and run **C/C++: Edit Configurations (UI)**.
 3. Verify that the `compilerPath` points to your compiler (e.g., MSVC or Clang).
 4. Add the include paths for Unreal Engine. These can be found in the `Engine/Source` and your project’s `Source` folders.
 
-## 7. Additional Tips
+## 6. Additional Tips
 - For better performance, exclude unnecessary folders from IntelliSense indexing. Add them to the `.vscode/settings.json` file:
 
 ```json
