@@ -23,10 +23,10 @@ This repository contains the latest development of the KMIDS Unreal Engine 5 (UE
     - [2. Install Build Tools](#2-install-build-tools)
   - [Final Setup](#final-setup)
   - [Additional Notes](#additional-notes)
-  - [Cloning the Repository](#cloning-the-repository)
+- [Cloning the Repository](#cloning-the-repository)
     - [For Contributors](#for-contributors)
     - [For Non-Contributors](#for-non-contributors)
-  - [Known Issues](#known-issues)
+- [Known Issues](#known-issues)
     - [Microsoft Azure DevOps Git LFS](#microsoft-azure-devops-git-lfs)
 
 ---
@@ -157,7 +157,7 @@ Once everything is set up, you are ready to start developing with Unreal Engine 
 
 
 
-## Cloning the Repository
+# Cloning the Repository
 
 ### For Contributors
 If you are contributing to this project:
@@ -202,7 +202,7 @@ If you only want to clone the repository:
 
 ---
 
-## Known Issues
+# Known Issues
 
 ### Microsoft Azure DevOps Git LFS
 There is currently a problem with Microsoft Azure DevOps Git LFS integration. This affects cloning the repository for users who are not explicitly added to the project.  
